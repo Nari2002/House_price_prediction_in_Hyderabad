@@ -173,7 +173,7 @@ def predict_price(area,num_bedrooms,location):
     else:
         price = model.predict([[area,num_bedrooms, label_encoded_location]])
         amount = price[0]
-        return st.markdown(f'<h4 class="title1">Price Predicted Succesfully in {location}  </h4><br>', unsafe_allow_html=True),st.write(f'<h3 class="title">Price is ₹{amount} only/-</h3><br>', unsafe_allow_html=True)
+        return st.markdown(f'<h4 class="title1">Price Predicted Succesfully in {location}  </h4><br>', unsafe_allow_html=True),st.write(f'<h3 class="title">Price is ₹f"₹{amount:,.2f}" only/-</h3><br>', unsafe_allow_html=True)
 
     
 
