@@ -29,7 +29,7 @@
     <ol>
         <li>Clone the repository:
             
-        </li>
+
   <li>Install the required dependencies:
             <code>pip install -r requirements.txt</code>
         </li>
