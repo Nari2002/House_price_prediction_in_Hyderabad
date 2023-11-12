@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import locale
-model = joblib.load("C:/Users/soppoju narender/hyd_house_price_model.pkl")
+model = joblib.load("hyd_house_price_model.pkl")
 
 Locations = ['Nizampet', 'Hitech City', 'Manikonda', 'Alwal', 'Kukatpally',
        'Gachibowli', 'Tellapur', 'Kokapet', 'Hyder Nagar', 'Mehdipatnam',
