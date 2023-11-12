@@ -3,7 +3,6 @@ import sklearn
 import numpy as np
 import pandas as pd
 import streamlit as st
-import locale
 model = joblib.load("hyd_house_price_model.pkl")
 
 Locations = ['Nizampet', 'Hitech City', 'Manikonda', 'Alwal', 'Kukatpally',
@@ -173,7 +172,6 @@ def predict_price(area,num_bedrooms,location):
         return("Location not found in the mapping")
     else:
         price = model.predict([[area,num_bedrooms, label_encoded_location]])
-        locale.setlocale(locale.LC_ALL, 'en_IN')
         amount = price[0]
         return st.markdown(f'<h4 class="title1">Price Predicted Succesfully in {location}  </h4><br>', unsafe_allow_html=True),st.write(f'<h3 class="title">Price is ₹{amount} only/-</h3><br>', unsafe_allow_html=True)
 
